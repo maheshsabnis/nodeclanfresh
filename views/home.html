@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        window.onload = function() {
+            var btn = document.getElementById('btn');
+
+            btn.addEventListener('click', function() {
+                let products = [];
+                let xhr = new XMLHttpRequest();
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        products = xhr.response;
+                        console.log(`In Method ${products}`);
+                    }
+                };
+                xhr.onerror = function() {
+                    console.log('Error Occured');
+                }
+                xhr.open('GET', 'http://localhost:5060/api/products');
+                xhr.send();
+            }, false);
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>The Home Page</h1>
+    <input type="button" value="get data" id="btn">
+
+</body>
+
+</html>
