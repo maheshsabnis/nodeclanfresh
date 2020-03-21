@@ -1,0 +1,83 @@
+Slide 1: Basic Introduction
+Hi All. This is Mahesh Sabnis. 
+In this course we will see how to develop the Node.js application with Data Access, from MySQL Relational Database. 
+The prerequisites for this course is the good knowledge of Node.js.
+
+Slide 2: Node.js
+Lets talk about some basics of Node.js.  
+Node.js is JavaScript Runtime for server-side JavaScript applications.
+This is based on build upon Chrome's V8 Engine
+Node.js provides various modules for developing server-side logic e.g.
+http module for Http Request Processing
+https for secure communication, fs for file io etc.  
+Node.js used to develop Isomorphic applications using JavaScript.
+Isomorphics apps uses same code base for front-end to server side 
+
+We can develop Develop Server Side applications with
+Data Access Layers,
+Business Layers, 
+Security, 
+REST APIs 
+
+Slide 3: The Isomorphic Application diagram 
+This diagram gives an idea of the isomorphic application development.
+We use JavaScript Client Application frameworks like Angular/React/ Vue.js for building Front-End applications. 
+These are component based JavaScript frameworks and libraries.
+To develop server-side code and hosting this code we use Node.js Hosting and runtime enviroment.
+In this environment we host the server-side application that is development using various Node.js modules. 
+These modules are installed using npm utility 
+
+Slide 4: Explaining various modules 
+While using Node.js for server-side apploication development we use several modules
+Express.js is the popular module on Node.js. Express.js is fast web application framework for node.js. Express.js is used to build Single Page/Mult-Page or hybrid applcations on Node.js. We can use REST APIs using Express.js with HTTP utility methods like get/post/put/delete. In the application for this course will use Express.js REST APIs.
+Sequelize module we will use for building Data Access layer. We will talk about it in some time in details
+The Business layer can be developed using ES 6 modules.
+ES 6 is a new stadard for developing JavaScript applciations.
+TO implement the security in the server side there are various moduels avaiable one of such module is jsonwebtoken. This provide token generation/signin and token verification features. This is out of the scope of the course.
+
+Slide 5: Explaining Sequelize
+Developing Data Access layer is an important step for any Line-of-Business applicaiton. This layer is responsible to connect to Database and perform CRUD operations. 
+With Object Relational Mapping (ORM) it is possible for developer to develop logical model aka entities and then map it withe database table. The applciation perform CRUD operations using this mapping.
+
+Sequelize is a promise-based Node.js ORM for databases like
+Postgres,
+MySQL, 
+MariaDB, 
+SQLite 
+Microsoft SQL Server. 
+
+Sequelize can be used from Nopde.js 6 onwards and it uses ES 6. It has various features like Solid Transaction support, relations etc.      
+
+Slide 6: Explaining the approaches of using Sequeleize in the application development
+We can use Sequelize with
+Code First Approach
+	In this approach, we define a model aka entity with properties. 
+	We need to define datatypes for these properties. 
+	These properties can have constraints. These constraints are similar to table 	column constraints.
+	We can further connect to databse and sync the model to generate tables    
+Database First Approach
+	In this approach we have the database ready with tables. We can genarate Models from these tables by connecting to the database. Sequqlize has command line tool to generate models from the database tables.
+
+Following are the Useful classes provided to work with sequelize.
+Sequelize
+Model
+DataTypes
+
+Slide 7: Explain installation of the Sequelize
+
+To create a node.js application using Visual Studio Code
+We need the Node.js that can be downloaded from www.nodejs.org. Lets visit the site.
+Visual Studio code is a free IDE by Microsoft and can be downloaded from the https://code.visualstudio.com. Lets visit the web site
+
+Lets open the Node.js command prompt and run the command to install 
+sequelize, sequelize-auto, mysql2 and express. We will be using express for creating REST API
+
+#====================================================================================
+Slide 8: Demo Starts here. Now lets create an application using
+1. Install the dependencies
+2. Create a folder and Open it in VS Code (do this using VS Code)
+3. Create a file and start coding
+
+Lets start working with the Code-First architecture. In this step, we will create first create a database in MySql. Opne MySql Workbench and create a new Empty Database in it. 
+
+   
