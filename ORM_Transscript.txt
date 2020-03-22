@@ -80,4 +80,11 @@ Slide 8: Demo Starts here. Now lets create an application using
 
 Lets start working with the Code-First architecture. In this step, we will create first create a database in MySql. Opne MySql Workbench and create a new Empty Database in it. 
 
-   
+   // Department.findAll()
+        // Department.findOne({ where: { DeptName: 'IT' } })
+        // Department.findByPk(400)
+       // Department.destroy({ where: { DeptNo: 40 } })
+
+	    Department.update({
+            Location: 'Pune-East'
+        }, { where: { DeptNo: 10 } })
