@@ -36,9 +36,14 @@ Employee.init({
     EmpNo: { type: DataTypes.INTEGER, primaryKey: true },
     EmpName: { type: DataTypes.STRING, allowNull: false },
     Salary: { type: DataTypes.INTEGER, allowNull: false },
+    DeptNo: { type: DataTypes.INTEGER, allowNull: false }
 }, { sequelize, modelName: 'Employee' });
 // 3a. Defining Associations
-Department.Employees = Department.hasMany(Employee);
+Department.Employees = Department.hasMany(Employee, {
+    foreignKey: 'DeptNo',
+    foreignKeyConstraint: true,
+    constraints: true
+});
 
 // 4. sync the model with the database using sequelize
 sequelize.sync({ force: true })
