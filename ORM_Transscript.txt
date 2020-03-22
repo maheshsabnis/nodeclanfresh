@@ -88,3 +88,28 @@ Lets start working with the Code-First architecture. In this step, we will creat
 	    Department.update({
             Location: 'Pune-East'
         }, { where: { DeptNo: 10 } })
+
+
+// Code First
+squelize-auto -h localhost -d ormdemos -u root -x P@ssw0rd_ 
+--dialect mysql -t departments employees
+
+
+const dept = sequelize.import('./../models/departments.js');
+
+sequelize.sync({ force: false })
+    .then(() => {
+        dept.findAll().then((result) =>
+            console.log(`result ${JSON.stringify(result)}`));
+        dept.create({
+            DeptNo: 10,
+            DeptName: 'IT',
+            Location: 'Pune',
+            Capacity: 100
+        }).then(() => {
+            dept.findAll().then((result) =>
+                console.log(`result ${JSON.stringify(result)}`));
+        });
+    }).catch((error) => {
+        console.log(`Error Occured ${error}`)
+    });
