@@ -92,7 +92,7 @@ Lets start working with the Code-First architecture. In this step, we will creat
 
 // Code First
 squelize-auto -h localhost -d ormdemos -u root -x P@ssw0rd_ 
---dialect mysql -t departments employees
+--dialect mysql -t departments, employees
 
 
 const dept = sequelize.import('./../models/departments.js');
