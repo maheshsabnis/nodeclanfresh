@@ -112,6 +112,7 @@ instance.post('/api/users/authuser', (request, response) => {
 });
 
 
+
 // 3. provide an access to get method only when the token is valid
 instance.get('/api/students', (request, response) => {
     // do not overwrite the models
