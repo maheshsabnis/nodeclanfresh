@@ -72,7 +72,7 @@ instance.post('/api/students', (request, response) => {
         .then(() => students.create(student))
         .then((result) => {
             if (result !== null) {
-                response.json({ statusCode: 200, data: JSON.stringify(result.toJSON()) });
+                response.json({ statusCode: 200, data: result.toJSON() });
                 response.end();
             } else {
                 response.json({ statusCode: 200, data: `Record is not Created` });

@@ -55,3 +55,5 @@ instance.delete('/api/products/:id', dalObj.deleteProduct);
 instance.listen(5060, () => {
     console.log('Express Server Started on port 5060');
 });
+
+module.exports = instance; // for testing purpose

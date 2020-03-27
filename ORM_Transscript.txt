@@ -171,11 +171,6 @@ function* actionWatcher() {
 }
 
 
-
-
-
-
-
 // the saga generator to watcher
 export default function* rootSagaOrders() {
     yield all([
